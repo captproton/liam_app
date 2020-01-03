@@ -1,0 +1,54 @@
+<%= form_with(model: message, local: true) do |form| %>
+  <% if message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+
+      <ul>
+      <% message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <% if message.persisted? %>
+      <div class="float-right">
+        <%= link_to 'Destroy', message, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if message.persisted? %>
+      <%= link_to "Cancel", message, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", messages_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<div class="page-header">
+  <%= link_to messages_path, class: 'btn btn-default' do %>
+    All Messages
+  <% end %>
+  <%= link_to edit_message_path(@message), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show message</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>First name:</dt>
+  <dd><%= @message.first_name %></dd>
+
+  <dt>Last name:</dt>
+  <dd><%= @message.last_name %></dd>
+
+  <dt>Email:</dt>
+  <dd><%= @message.email %></dd>
+
+  <dt>Phone number:</dt>
+  <dd><%= @message.phone_number %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @message.body %></dd>
+
+</dl>

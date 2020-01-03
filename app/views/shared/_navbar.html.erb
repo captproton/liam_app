@@ -4,9 +4,11 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html">
+        <a class="navbar-brand logo-image" href="/">
             <!-- <img src="images/logo.svg" alt="alternative"> -->
             <%= image_tag 'logo.svg' %>
+            <%# eventually the above logo should be changed and rendered as a partial %>
+            <%#= render partial: 'shared/svg_logo' %>
         </a> 
         
         <!-- Mobile Menu Toggle Button -->
@@ -32,15 +34,15 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="#details" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">DETAILS</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
+                        <a class="dropdown-item" href="/terms"><span class="item-text">TERMS CONDITIONS</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
+                        <a class="dropdown-item" href="/privacy"><span class="item-text">PRIVACY POLICY</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
 
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACT</a>
+                    <a class="nav-link page-scroll" href="/#contact">CONTACT</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">

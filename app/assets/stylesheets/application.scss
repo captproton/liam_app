@@ -5,16 +5,19 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap";
-@import "jumpstart/sticky-footer";
-@import "jumpstart/announcements";
+// @import "jumpstart/sticky-footer";
+// @import "jumpstart/announcements";
+@import "leno/magnific-popup";
+@import "leno/swiper";
+@import "leno/styles";
 
 // Fixes bootstrap nav-brand container overlap
-@include media-breakpoint-down(xs) {
-  .container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+// @include media-breakpoint-down(xs) {
+//   .container {
+//     margin-left: 0;
+//     margin-right: 0;
+//   }
+// }
 
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
